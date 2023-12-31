@@ -1,2 +1,2 @@
 # requirements.txt
-selenium==4.16.1
+selenium==4.16.0

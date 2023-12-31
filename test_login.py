@@ -7,6 +7,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.edge.service import Service
 from configparser import ConfigParser
 from pages.login_page import LoginPage
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
 
 
 
@@ -26,7 +29,7 @@ class TestLogin(unittest.TestCase):
         # service = Service(chrome_driver_path)
         # edge_service = Service(edge_driver_path)
 
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         logging.info("Test setup completed.")
 
         login_page_url = self.config.get("Urls", "login_page")

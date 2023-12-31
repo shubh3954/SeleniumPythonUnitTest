@@ -16,10 +16,10 @@ class TestLogin(unittest.TestCase):
         project_directory = os.path.dirname(os.path.abspath(__file__))
 
         self.config=ConfigParser()
-        config_dir=os.path.join(project_directory, "..", "config.ini")
+        config_dir=os.path.join(project_directory, "config.ini")
         self.config.read(config_dir)
 
-        drivers_directory = os.path.join(project_directory, "..", "drivers")
+        drivers_directory = os.path.join(project_directory, "drivers")
         chrome_driver_path = os.path.join(drivers_directory, "chromedriver.exe")
         edge_driver_path = os.path.join(drivers_directory, "msedgedriver.exe")
 

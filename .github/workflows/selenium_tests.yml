@@ -23,5 +23,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Print Working Directory
+        run: |
+          pwd
+
+      - name: Print Python Version
+        run: |
+          python --version
+
+      - name: Set PYTHONPATH
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+
       - name: Run Selenium Tests
         run: python tests/test_login.py

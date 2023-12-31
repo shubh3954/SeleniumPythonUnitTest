@@ -3,6 +3,7 @@ import os
 import unittest
 import logging
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.edge.service import Service
 from configparser import ConfigParser
@@ -28,8 +29,10 @@ class TestLogin(unittest.TestCase):
         #
         # service = Service(chrome_driver_path)
         # edge_service = Service(edge_driver_path)
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
 
-        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=chrome_options)
         logging.info("Test setup completed.")
 
         login_page_url = self.config.get("Urls", "login_page")

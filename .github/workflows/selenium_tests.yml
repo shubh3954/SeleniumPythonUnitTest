@@ -33,8 +33,9 @@ jobs:
 
       - name: Set PYTHONPATH
         run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)
-          export PYTHONPATH=$PYTHONPATH:$(pwd)/pages
+          export PYTHONPATH=$PYTHONPATH:/home/runner/work/SeleniumPythonUnitTest/SeleniumPythonUnitTest
+          export PYTHONPATH=$PYTHONPATH:/home/runner/work/SeleniumPythonUnitTest/SeleniumPythonUnitTest/pages
+
 
       - name: Print Current Directory Contents
         run: |

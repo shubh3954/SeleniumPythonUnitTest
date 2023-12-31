@@ -34,6 +34,11 @@ jobs:
       - name: Set PYTHONPATH
         run: |
           export PYTHONPATH=$PYTHONPATH:$(pwd)
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/pages
+
+      - name: Print Current Directory Contents
+        run: |
+          ls -la
 
       - name: Run Selenium Tests
         run: python tests/test_login.py

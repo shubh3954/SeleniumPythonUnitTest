@@ -32,4 +32,4 @@ jobs:
           python --version
 
       - name: Run Selenium Tests
-        run: python tests/test_login.py
+        run: python test_login.py

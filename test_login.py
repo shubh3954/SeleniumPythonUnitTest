@@ -19,14 +19,14 @@ class TestLogin(unittest.TestCase):
         config_dir=os.path.join(project_directory, "config.ini")
         self.config.read(config_dir)
 
-        drivers_directory = os.path.join(project_directory, "drivers")
-        chrome_driver_path = os.path.join(drivers_directory, "chromedriver.exe")
-        edge_driver_path = os.path.join(drivers_directory, "msedgedriver.exe")
+        # drivers_directory = os.path.join(project_directory, "drivers")
+        # chrome_driver_path = os.path.join(drivers_directory, "chromedriver.exe")
+        # edge_driver_path = os.path.join(drivers_directory, "msedgedriver.exe")
+        #
+        # service = Service(chrome_driver_path)
+        # edge_service = Service(edge_driver_path)
 
-        service = Service(chrome_driver_path)
-        edge_service = Service(edge_driver_path)
-
-        self.driver = webdriver.Chrome(service=service)
+        self.driver = webdriver.Chrome()
         logging.info("Test setup completed.")
 
         login_page_url = self.config.get("Urls", "login_page")

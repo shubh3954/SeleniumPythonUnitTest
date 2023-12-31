@@ -31,15 +31,5 @@ jobs:
         run: |
           python --version
 
-      - name: Set PYTHONPATH
-        run: |
-          export PYTHONPATH=$PYTHONPATH:/home/runner/work/SeleniumPythonUnitTest/SeleniumPythonUnitTest
-          export PYTHONPATH=$PYTHONPATH:/home/runner/work/SeleniumPythonUnitTest/SeleniumPythonUnitTest/pages
-
-
-      - name: Print Current Directory Contents
-        run: |
-          ls -la
-
       - name: Run Selenium Tests
         run: python tests/test_login.py

@@ -6,9 +6,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.edge.service import Service
 from configparser import ConfigParser
-import sys
-print(sys.path)
 from pages.login_page import LoginPage
+
 
 
 class TestLogin(unittest.TestCase):
